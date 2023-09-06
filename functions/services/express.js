@@ -25,14 +25,14 @@ app.set('views', path.resolve('views'))
 
 if (config.env !== 'test') app.use(morgan('combined'))
 
-// render HTML for user password reset
-app.get('/', (req, res) => {
-  res.send({app: 'Vision Calling'})
-})
-
 // passport
 app.use(passport.initialize())
 passport.use('jwt', passportJwt.jwt)
+
+// baseurl
+app.get('/', (req, res) => {
+  res.send({app: 'Vision Calling'})
+})
 
 // render HTML for user password reset
 app.get('/verify-password-key', (req, res) => {
