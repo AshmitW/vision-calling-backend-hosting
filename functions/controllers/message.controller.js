@@ -81,7 +81,7 @@ exports.getAll = async (req, res, next) => {
             name: user.name,
             email: user.email
           }
-          existingMsg[0].items[index].secondParticipant = transformedUser
+          existingMsg[0].items[index].receiver = transformedUser
         }
       }
     }
