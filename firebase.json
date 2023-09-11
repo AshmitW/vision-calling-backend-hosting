@@ -12,6 +12,7 @@
     }
   ],
   "hosting": {
+	"site": "vision-calling-backend",
     "public": "public",
 	"rewrites": [{
 		"source": "**",
